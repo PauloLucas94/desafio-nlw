@@ -1,8 +1,46 @@
 #Variables
 @baseUrl = http://localhost:3333
+
+###
+# @name getRooms
+#Get a list of rooms
 GET {{baseUrl}}/rooms
 
 ###
+# @name createRoom
+#Create a new room
+POST {{baseUrl}}/rooms
+Content-Type: application/json
 
+{
+  "name": "Sala dos Pequenos Gafanhotos",
+  "description": "Foguete pronto para descarregar os gafanhotos"
+}
+
+###
+# @name getRoomQuestions
+#Get room questions
+GET {{baseUrl}}/rooms/{{roomId}}/questions
+
+###
+# @name createQuestion
+#Create a new question
+POST {{baseUrl}}/rooms/{{roomId}}/questions
+Content-Type: application/json
+
+{
+  "question": "Quais são os horários dos treinamentos disponíveis?"
+}
+
+###
+@roomId = {{createRoom.response.body.$.roomId}}
+
+
+###
 #Health Check
 GET {{baseUrl}}/health
+
+
+
+
+
