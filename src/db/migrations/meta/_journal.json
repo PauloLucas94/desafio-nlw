@@ -15,6 +15,13 @@
       "when": 1752071641187,
       "tag": "0001_messy_aqueduct",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1752246657570,
+      "tag": "0002_left_harpoon",
+      "breakpoints": true
     }
   ]
 }
